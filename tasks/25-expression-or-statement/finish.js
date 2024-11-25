@@ -1,28 +1,49 @@
-/** ЗАДАЧА 25 - Выражение или инструкция
+/** ЗАВДАННЯ 25 - Вираз або інструкція
  *
- * Определите тип каждой конструкции JavaScript:
- *  - выражение (expression)
- *  - инструкция (statement)
- *  - выражение-инструкция (expression statement)
+ * Визначте тип кожної конструкції JavaScript:
+ * - вираз (expression)
+ * - інструкція (statement)
+ * - вираз-інструкція (expression statement)
  */
 
-15
+// expression statement
+15;
 
+// statement
 const myObject = {
+  // Object literal is expression
   x: 10,
   y: true,
-}
+};
 
-myObject.z = 'abc'
+// expression statement
+myObject.z = 'abc'; // <-- expression
 
-delete myObject.x
+// expression statement
+delete myObject.x;
 
-let newVariable
+// statement
+let newVariable;
 
-newVariable = 30 + 5
+// expression statement
+newVariable = 30 + 5; // <-- expression
 
-console.log(newVariable)
+// expression statement
+console.log(newVariable);
+/**             ^
+ *          expression
+ */
 
+// statement
 if (newVariable > 10) {
-  console.log(`${newVariable} больше 10`)
+  /**       ^
+   *    expression
+   */
+
+  // expression statement
+  console.log(`${newVariable} больше 10`); // <-- newVariable is expression
+  /**         _________________________
+   *                      ^
+   *                 expression
+   */
 }
