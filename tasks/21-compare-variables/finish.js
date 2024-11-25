@@ -1,17 +1,17 @@
-/** ЗАДАЧА 21 - Сравнение переменных
+/** ЗАВДАННЯ 21 - Порівняння змінних
  *
- * 1. Сравните 2 переменные "myVariable1" и "myVariable2".
- * Выведите в консоль "true", если значение "myVariable1" меньше или равно "myVariable2".
+ * 1. Порівняйте 2 змінні "myVariable1" та "myVariable2".
+ * Виведіть у консоль "true", якщо значення "myVariable1" менше або дорівнює "myVariable2".
  *
- * 2. Преобразуйте обе переменные в числа перед сравнением.
+ * 2. Перетворіть обидві змінні на числа перед порівнянням.
  */
 
-let myVariable1 = 10
-let myVariable2 = '5'
+let myVariable1 = 10;
+let myVariable2 = '5';
 
-// Напишите код здесь
+console.log(parseInt(myVariable1) <= parseInt(myVariable2));
 
-myVariable1 = '20'
-myVariable2 = 100
+myVariable1 = '20';
+myVariable2 = 100;
 
-// Напишите код здесь
+console.log(parseInt(myVariable1) <= parseInt(myVariable2));
