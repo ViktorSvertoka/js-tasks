@@ -1,13 +1,47 @@
-/** ЗАДАЧА 34 - Массив объектов
+/** ЗАВДАННЯ 34 - Масив об'єктів
  *
- * 1. Создайте массив с 3 объектами "cars"
+ * 1. Створіть масив із 3 об'єктами "cars"
  *
- * 2. Каждый объект должен иметь три свойства
- *  - carBrand (строка)
- *  - price (число)
- *  - isAvailableForSale (логическое значение)
+ * 2. Кожен об'єкт повинен мати три властивості
+ * - carBrand (рядок)
+ * - price (число)
+ * - isAvailableForSale (логічне значення)
  *
- * 3. Добавьте еще один объект в массив
+ * 3. Додайте ще один об'єкт у масив
  *
- * 4. Выведите результирующий массив в консоль
+ * 4. Виведіть результуючий масив у консоль
  */
+
+const cars = [
+  {
+    carBrand: 'Tesla',
+    price: 70000,
+    isAvailableForSale: true,
+  },
+  {
+    carBrand: 'BMW',
+    price: 60000,
+    isAvailableForSale: true,
+  },
+  {
+    carBrand: 'Toyota',
+    price: 40000,
+    isAvailableForSale: false,
+  },
+];
+
+cars.push({
+  carBrand: 'Honda',
+  price: 30000,
+  isAvailableForSale: false,
+});
+
+const newCar = {
+  carBrand: 'Mazda',
+  price: 20000,
+  isAvailableForSale: true,
+};
+
+cars.push(newCar);
+
+console.log(cars);
