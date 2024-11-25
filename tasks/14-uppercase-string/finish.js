@@ -1,14 +1,32 @@
-/** ЗАДАЧА 14 - Строка заглавными буквами
+/** ЗАВДАННЯ 14 - Рядок великими літерами
  *
- * 1. Создайте переменную и присвойте ей любую строку
+ * 1. Створіть змінну і надайте їй будь-який рядок
  *
- * 2. Убедитесь что значение этой переменной НЕ является экземпляром String
- * Используйте для этого оператор "instanceof"
+ * 2. Переконайтеся, що значення цієї змінної НЕ є екземпляром String
+ * Використовуйте для цього оператор "instanceof"
  *
- * 3. Убедитесь что значение этой переменной имеет тип "string"
+ * 3. Переконайтеся, що значення цієї змінної має тип "string"
  *
- * 4. Создайте другую переменную и ее значением должно быть значение
- * первой переменной заглавными буквами
+ * 4. Створіть іншу змінну та її значенням має бути значення
+ * Першої змінної великими літерами
  *
- * 5. Выведите в консоль значение второй переменной
+ * 5. Виведіть у консоль значення другої змінної
  */
+
+const myFavoritePerson = 'Steve Jobs';
+
+console.log(myFavoritePerson instanceof String);
+
+console.log(typeof myFavoritePerson);
+
+const personToUpperCase = myFavoritePerson.toUpperCase();
+
+console.log(personToUpperCase);
+
+const myString = new String('Steve');
+
+console.log(myString instanceof String);
+
+console.log(typeof myString);
+
+console.log(myString.toUpperCase());
