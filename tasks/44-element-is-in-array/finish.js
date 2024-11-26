@@ -1,14 +1,17 @@
-/** ЗАДАЧА 44 - Поиск элементов примитивных типов в массиве
+/** ЗАВДАННЯ 44 - Пошук елементів примітивних типів у масиві
  *
- * 1. Создайте функцию isElementInArray с двумя параметрами "inputArray" и "searchElement"
+ * 1. Створіть функцію isElementInArray з двома параметрами "inputArray" та "searchElement"
  *
- * 2. Если "searchElement" найден в "inputArray" - вернуть "true"
+ * 2. Якщо "searchElement" знайдено в "inputArray" - повернути "true"
  *
- * 3. В противном случае вернуть "false"
+ * 3. В іншому випадку повернути "false"
  */
 
-const transports = ['Bus', 'Car', 'Bicycle', 'Airplane']
+const isElementInArray = (inputArray, searchElement) =>
+  inputArray.includes(searchElement);
 
-console.log(isElementInArray(transports, 'Bus')) // true
-console.log(isElementInArray(transports, 'Phone')) // false
-console.log(isElementInArray(transports, 'Airplane')) // true
+const transports = ['Bus', 'Car', 'Bicycle', 'Airplane'];
+
+console.log(isElementInArray(transports, 'Bus')); // true
+console.log(isElementInArray(transports, 'Phone')); // false
+console.log(isElementInArray(transports, 'Airplane')); // true
