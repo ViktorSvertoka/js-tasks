@@ -1,25 +1,33 @@
-/** ЗАДАЧА 46 - Добавление уникальных элементов в массив
+/** ЗАВДАННЯ 46 - Додавання унікальних елементів до масиву
  *
- * 1. Создайте функцию "pushIfUnique" с двумя параметрами "inputArray" и "newElement"
+ * 1. Створіть функцію "pushIfUnique" з двома параметрами "inputArray" та "newElement"
  *
- * 2. Если "inputArray" уже содержит "newElement",
- * выведите в консоль "{newElement} уже находится в массиве"
+ * 2. Якщо "inputArray" вже містить "newElement",
+ * виведіть у консоль "{newElement} вже знаходиться в масиві"
  *
- * 3. В противном случае добавьте "newElement" в "inputArray"
+ * 3. В іншому випадку додайте "newElement" в "inputArray"
  *
- * ПРИМЕЧАНИЕ: Мы предполагаем, что "inputArray" содержит элементы только примитивных типов
+ * ПРИМІТКА: Ми припускаємо, що "inputArray" містить елементи лише примітивних типів
  */
 
-const myNumbers = [123, 50, 27]
+const pushIfUnique = (inputArray, newElement) => {
+  if (inputArray.includes(newElement)) {
+    return console.log(`${newElement} вже знаходиться в масиві.`);
+  }
 
-pushIfUnique(myNumbers, 50) // "50 уже в массиве"
-console.log(myNumbers) // [123, 50, 27]
+  return inputArray.push(newElement);
+};
 
-pushIfUnique(myNumbers, 80)
-console.log(myNumbers) // [123, 50, 27, 80]
+const myNumbers = [123, 50, 27];
 
-pushIfUnique(myNumbers, 80) // "80 уже в массиве"
-console.log(myNumbers) // [123, 50, 27, 80]
+pushIfUnique(myNumbers, 50); // "50 вже в масиві"
+console.log(myNumbers); // [123, 50, 27]
 
-pushIfUnique(myNumbers, 77)
-console.log(myNumbers) // [123, 50, 27, 80, 77]
+pushIfUnique(myNumbers, 80);
+console.log(myNumbers); // [123, 50, 27, 80]
+
+pushIfUnique(myNumbers, 80); // "80 вже в масиві"
+console.log(myNumbers); // [123, 50, 27, 80]
+
+pushIfUnique(myNumbers, 77);
+console.log(myNumbers); // [123, 50, 27, 80, 77]
