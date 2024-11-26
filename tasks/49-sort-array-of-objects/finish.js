@@ -1,13 +1,21 @@
-/** ЗАДАЧА 49 - Сортировка объектов в массиве
+/** ЗАВДАННЯ 49 - Сортування об'єктів у масиві
  *
- * 1. Создайте функцию "sortProductsByPrice" с одним параметром "products"
+ * 1. Створіть функцію "sortProductsByPrice" з одним параметром "products"
  *
- * 2. Эта функция должна отсортировать входной массив товаров
- * по цене каждого товара в порядке возрастания
- * и вернуть отсортированный массив
+ * 2. Ця функція повинна відсортувати вхідний масив товарів
+ * за ціною кожного товару в порядку зростання
+ * і повернути відсортований масив
  *
- * 3. Оригинальный массив должен остаться без изменений
+ * 3. Оригінальний масив повинен залишитися без змін
  */
+
+// const sortProductsByPrice = products => {
+//   const copyOfProducts = [...products];
+//   return copyOfProducts.sort((a, b) => a.price - b.price);
+// };
+
+const sortProductsByPrice = products =>
+  [...products].sort((a, b) => a.price - b.price);
 
 const inputProducts = [
   {
@@ -34,10 +42,10 @@ const inputProducts = [
     quantity: 2,
     category: 'Watches',
   },
-]
+];
 
-// const sortedProducts = sortProductsByPrice(inputProducts)
+const sortedProducts = sortProductsByPrice(inputProducts);
 
-// console.log(sortedProducts) // Массив отсортированных товаров
+console.log(sortedProducts); // Масив відсортованих товарів
 
-// console.log(inputProducts) // Оригинальный массив не должен измениться
+console.log(inputProducts); // Оригінальний масив не повинен змінитися
