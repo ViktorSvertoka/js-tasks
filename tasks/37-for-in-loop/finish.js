@@ -1,18 +1,20 @@
-/** ЗАДАЧА 37 - Цикл "for .. in"
+/** ЗАВДАННЯ 37 - Цикл "for .. in"
  *
- * Внутри цикла "for .. in" перед выводом значения свойства в консоль
- * выполните проверку того, что свойство является
- * собственным свойством объекта
+ * Всередині циклу "for .. in" перед виведенням значення властивості в консоль
+ * Виконайте перевірку того, що властивість є
+ * Власною властивістю об'єкта
  */
 
 const myObject = {
   name: 'Mike',
   age: 30,
   city: 'London',
-}
+};
 
-Object.prototype.country = 'England'
+Object.prototype.country = 'England';
 
 for (let key in myObject) {
-  console.log(myObject[key])
+  if (myObject.hasOwnProperty(key)) {
+    console.log(myObject[key]);
+  }
 }
