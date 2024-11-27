@@ -1,13 +1,29 @@
-/** ЗАДАЧА 57 - Трансформация массива объектов
+/** ЗАВДАННЯ 57 - Трансформація масиву об'єктів
  *
- * 1. Создайте функцию "processPosts", которая будет возвращать новый массив сообщений
+ * 1. Створіть функцію "processPosts", яка повертатиме новий масив повідомлень
  *
- * 2. Обратите внимание, что
- *  - некоторые имена свойств в каждом сообщении изменены
- *  - ID каждого сообщения увеличен на 1000
+ * 2. Зверніть увагу, що
+ * - деякі імена властивостей у кожному повідомленні змінені
+ * - ID кожного повідомлення збільшено на 1000
  *
- * 3. Исходный массив постов должен остаться без изменений
+ * 3. Вихідний масив постів має залишитися без змін
  */
+
+const processPosts = posts => {
+  return posts.map(post => {
+    const {
+      postId,
+      author: postAuthor,
+      commentsQty: postCommentsQty = 0,
+    } = post;
+
+    return {
+      postAuthor,
+      postCommentsQty,
+      postId: postId + 1000,
+    };
+  });
+};
 
 const testPosts = [
   {
@@ -24,10 +40,10 @@ const testPosts = [
     author: 'merryl',
     commentsQty: 8,
   },
-]
+];
 
-const processedPosts = processPosts(testPosts)
-console.log(processedPosts)
+const processedPosts = processPosts(testPosts);
+console.log(processedPosts);
 /*
 [
   {
@@ -48,5 +64,5 @@ console.log(processedPosts)
 ]
 */
 
-console.log(testPosts)
-// оригинальный массив должен остаться без изменений
+console.log(testPosts);
+// оригінальний масив має залишитися без змін
