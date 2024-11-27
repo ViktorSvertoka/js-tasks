@@ -1,22 +1,24 @@
-/** ЗАДАЧА 64 - Hoisting
+/** ЗАВДАННЯ 64 - Hoisting
  *
- * Измените код, чтобы исправить ошибку после строки 13.
+ * Змініть код, щоб виправити помилку після рядка 13.
  *
- * Ошибка после строки 21 все равно должна генерироваться.
- * Почему ошибка после строки 21 возникает?
+ * Помилка після рядка 21 все одно має генеруватися.
+ * Чому помилка після рядка 21 виникає?
  */
 
-const a = 5
-const b = 10
+const a = 5;
+const b = 10;
 
 if (b > a) {
-  c = a + b + c
+  let c = 2;
+  c = a + b + c;
+
   // ДО: ReferenceError: Cannot access 'c' before initialization
-  // ПОСЛЕ: Нет ошибки
-  let c = 2
-  console.log(c)
+  // ПІСЛЯ: Немає помилки
+
+  console.log(c);
   // 17
 }
 
-console.log(c)
+console.log(c);
 // Uncaught ReferenceError: c is not defined
