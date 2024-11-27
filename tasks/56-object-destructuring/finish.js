@@ -1,13 +1,27 @@
-/** ЗАДАЧА 56 - Деструктуризация объектов
+/** ЗАВДАННЯ 56 - Деструктуризація об'єктів
  *
- * 1. Измените функцию "personInfo" так, чтобы получить в консоли такой же вывод
+ * 1. Змініть функцію "personInfo" так, щоб отримати в консолі такий самий висновок
  *
- * 2. Объект, возвращаемый функцией "personInfo", должен содержать только сокращенные имена свойств
+ * 2. Об'єкт, що повертається функцією "personInfo", повинен містити лише скорочені імена властивостей
  */
 
-const personInfo = (/* parameters */) => {
-  /* return ... */
-}
+const personInfo = person => {
+  const {
+    name,
+    age: personAge,
+    location: { country: origin, city: homeCity },
+    friendsQty = 0,
+    createdAtYear = new Date().getFullYear(),
+  } = person;
+  return {
+    name,
+    personAge,
+    origin,
+    homeCity,
+    friendsQty,
+    createdAtYear,
+  };
+};
 
 const person = {
   name: 'Alice',
@@ -16,11 +30,11 @@ const person = {
     country: 'England',
     city: 'London',
   },
-}
+};
 
-const result = personInfo(person)
+const result = personInfo(person);
 
-console.log(result)
+console.log(result);
 /*
 {
   name: "Alice",
