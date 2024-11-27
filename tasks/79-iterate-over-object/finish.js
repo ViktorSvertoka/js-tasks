@@ -1,12 +1,12 @@
-/** ЗАДАЧА 79 - Перебор свойств объекта
+/** ЗАВДАННЯ 79 - Перебір властивостей об'єкта
  *
- * 1. Создайте функцию "sumObjectValues", которая будет суммировть
- * все значения свойств, которые являются числами.
+ * 1. Створіть функцію "sumObjectValues", яка буде підсумовувати
+ * Усі значення властивостей, які є числами.
  *
- * 2. Сумму чисел необходимо вернуть из функции
+ * 2. Суму чисел необхідно повернути з функції
  *
- * 3. Убедитесь, что итерация выполняется только
- * по собственным свойствам объекта
+ * 3. Переконайтеся, що ітерація виконується лише
+ * за власними властивостями об'єкта
  */
 
 const objectWithNumbers = {
@@ -14,10 +14,22 @@ const objectWithNumbers = {
   b: 20,
   c: 'string',
   d: 12,
-}
+};
 
-// Создайте функцию здесь
+// Створіть функцію тут
 
-const result = sumObjectValues(objectWithNumbers)
-console.log(result)
+const sumObjectValues = nums => {
+  let sum = 0;
+
+  Object.keys(nums).forEach(key => {
+    if (typeof nums[key] === 'number') {
+      sum += nums[key];
+    }
+  });
+
+  return sum;
+};
+
+const result = sumObjectValues(objectWithNumbers);
+console.log(result);
 //42
