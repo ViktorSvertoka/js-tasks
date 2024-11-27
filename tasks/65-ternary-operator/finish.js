@@ -1,21 +1,17 @@
-/** ЗАДАЧА 65 - Тернарный оператор
+/** ЗАВДАННЯ 65 - Тернарний оператор
  *
- * Измените функцию "isNumber", используя тернарный оператор
+ * Змініть функцію "isNumber", використовуючи тернарний оператор
  */
 
 function isNumber(a) {
-  if (typeof a === 'number') {
-    return `${a} - это число`
-  } else {
-    return `${a} - это не число`
-  }
+  return typeof a === 'number' ? `${a} - це число` : `${a} - це не число`;
 }
 
-console.log(isNumber(10))
-// 10 - это число
+console.log(isNumber(10));
+// 10 - це число
 
-console.log(isNumber('Привет'))
-// Привет - это не число
+console.log(isNumber('Привіт'));
+// Привіт - це не число
 
-console.log(isNumber(true))
-// true - это не число
+console.log(isNumber(true));
+// true - це не число
