@@ -1,15 +1,46 @@
-/** ЗАДАЧА 59 - Расширение массивов
+/** ЗАВДАННЯ 59 - Розширення масивів
  *
- * 1. Создайте новый класс "ExtendedArray", который должен расширять встроенный "Array"
+ * 1. Створіть новий клас "ExtendedArray", який має розширювати вбудований "Array"
  *
- * 2. Добавьте в новый класс два пользовательских метода:
- *  - "sum" - он должен возвращать сумму всех элементов массива
- *  - "onlyNumbers" - должен возвращать новый массив,
- * который будет содержать только числа из исходного массива
+ * 2. Додайте до нового класу два методи користувача:
+ * - "sum" - він повинен повертати суму всіх елементів масиву
+ * - "onlyNumbers" - повинен повертати новий масив,
+ * який міститиме лише числа з вихідного масиву
  *
- * 3. Создайте несколько экземпляров нового класса "ExtendedArray"
- * и протестируйте оба метода "sum" и "onlyNumbers".
+ * 3. Створіть кілька екземплярів нового класу "ExtendedArray"
+ * і протестуйте обидва методи "sum" та "onlyNumbers".
  *
- * 4. Убедитесь, что остальные методы массивов такие,
- * как "forEach", "map" также доступны
+ * 4. Переконайтеся, що інші методи масивів такі,
+ * як "forEach", "map" також доступні
  */
+
+class ExtendedArray extends Array {
+  sum() {
+    return this.reduce((sum, num) => sum + num, 0);
+  }
+
+  onlyNumbers() {
+    return this.filter(element => typeof element === 'number');
+  }
+}
+
+const myExtendedArray = new ExtendedArray(1, 5, 10);
+
+console.log(myExtendedArray);
+
+console.log(myExtendedArray.sum());
+
+console.log(myExtendedArray.onlyNumbers());
+
+const myExtendedArray2 = new ExtendedArray(
+  'abc',
+  true,
+  10,
+  null,
+  44,
+  undefined,
+);
+
+console.log(myExtendedArray2.onlyNumbers());
+
+myExtendedArray2.forEach(element => console.log(element));
