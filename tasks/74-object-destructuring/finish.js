@@ -1,13 +1,13 @@
-/** ЗАДАЧА 74 - Деструктуризация объектов
+/** ЗАВДАННЯ 74 - Деструктуризація об'єктів
  *
- * Создайте функцию "shortPerson", которая деструктуризирует объект
- * и возвращает его короткую версию
+ * Створіть функцію "shortPerson", яка деструктурує об'єкт
+ * і повертає його коротку версію
  *
- * Пример результата:
- * { n: "Mike", c: "Spain", a: 23, p: 100 }
+ * Приклад результату:
+ * { n: "Mike", c: "Spain", a: 23, p: 100}
  *
- * Если входной объект не имеет поля postsQuantity,
- * он должен получить значение по умолчанию 0
+ * Якщо вхідний об'єкт не має поля postsQuantity,
+ * він повинен отримати значення за умовчанням 0
  */
 
 const person1 = {
@@ -17,7 +17,7 @@ const person1 = {
     age: 23,
   },
   postsQuantity: 100,
-}
+};
 
 const person2 = {
   name: 'Alice',
@@ -25,12 +25,27 @@ const person2 = {
     country: 'Italy',
     age: 25,
   },
-}
+};
 
-// Напишите функцию "shortPerson" здесь
+// Напишіть функцію "shortPerson" тут
 
-console.log(shortPerson(person1))
+const shortPerson = person => {
+  const {
+    name: n,
+    info: { country: c, age: a },
+    postsQuantity: p = 0,
+  } = person;
+
+  return {
+    n,
+    c,
+    a,
+    p,
+  };
+};
+
+console.log(shortPerson(person1));
 // { n: "Mike", c: "Spain", a: 23, p: 100 }
 
-console.log(shortPerson(person2))
+console.log(shortPerson(person2));
 // { n: "Alice", c: "Italy", a: 25, p: 0 }
