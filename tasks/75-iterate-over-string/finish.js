@@ -1,15 +1,23 @@
-/** ЗАДАЧА 75 - Перебор символов строки
+/** ЗАВДАННЯ 75 - Перебір символів рядка
  *
- * Подсчитайте количество строчных гласных букв в строке.
- * Гласные буквы - a, e, i, o, u
+ * Підрахуйте кількість малих голосних літер у рядку.
+ *
+ * Голосні літери - a, e, i, o, u
  */
 
-let vowelsCount = 0
-const vowels = ['a', 'e', 'i', 'o', 'u']
+let vowelsCount = 0;
 
-const str = 'Today is the best day of my life'
+const vowels = ['a', 'e', 'i', 'o', 'u'];
 
-// Напишите код здесь
+const str = 'Today is the best day of my life';
 
-console.log(vowelsCount)
+// Напишіть код тут
+
+str.split('').forEach(char => {
+  if (vowels.includes(char)) {
+    vowelsCount += 1;
+  }
+});
+
+console.log(vowelsCount);
 // 9
