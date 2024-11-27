@@ -1,26 +1,25 @@
-/** ЗАДАЧА 67 - Параметры функции по умолчанию
+/** ЗАВДАННЯ 67 - Параметри функції за промовчанням
  *
- * 1. Ответьте на следующий вопрос:
- *  - Почему в строке 12 мы не можем просто использовать оператор ИЛИ?
- *    mult = mult || 2
+ * 1. Дайте відповідь на наступне питання:
+ * - Чому в рядку 12 ми не можемо просто використовувати оператор АБО?
+ * mult = mult | 2
  *
- * 2. Перепишите функцию с использованием значения по умолчанию
+ * 2. Перепишіть функцію за допомогою значення за промовчанням
  * для параметра mult в "multiplyBy"
  */
 
-function multiplyBy(a, mult) {
-  mult = mult !== undefined ? mult : 2
-  console.log(a * mult)
+function multiplyBy(a, mult = 2) {
+  console.log(a * mult);
 }
 
-multiplyBy(2)
+multiplyBy(2);
 // 4
 
-multiplyBy(2, undefined)
+multiplyBy(2, undefined);
 // 4
 
-multiplyBy(2, 0)
+multiplyBy(2, 0);
 // 0
 
-multiplyBy(5, 10)
+multiplyBy(5, 10);
 // 50
